@@ -8,7 +8,6 @@ export function middleware(request: NextRequest) {
 
   const authPages = ["/login", "/register"];
 
-  // ❌ BELUM LOGIN → KE LOGIN
   if (!token && !authPages.includes(pathname)) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
@@ -19,13 +18,9 @@ export function middleware(request: NextRequest) {
         token,
         process.env.JWT_SECRET!
       );
-
-      // 🔒 Kalau buka /admin tapi bukan admin
       if (pathname.startsWith("/admin") && decoded.role !== "admin") {
         return NextResponse.redirect(new URL("/", request.url));
       }
-
-      // ✅ Sudah login → gak boleh ke login/register
       if (authPages.includes(pathname)) {
         return NextResponse.redirect(new URL("/", request.url));
       }
@@ -34,7 +29,6 @@ export function middleware(request: NextRequest) {
       return NextResponse.redirect(new URL("/login", request.url));
     }
   }
-
   return NextResponse.next();
 }
 

@@ -38,12 +38,8 @@ export default function Page() {
       alert("Register berhasil");
       setIsRegister(false);
     } else {
-      // ✅ SIMPAN USER KE LOCALSTORAGE
       localStorage.setItem("user", JSON.stringify(data.user));
-
       alert("Login berhasil");
-
-      // ✅ REDIRECT BERDASARKAN ROLE
       if (data.user.role === "admin") {
         router.push("/admin");
       } else {
