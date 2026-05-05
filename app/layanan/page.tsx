@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar"; // ⬅️ tambah ini
+import Navbar from "../components/Navbar";
 import Image from "next/image";
 
 export default function LayananPage() {
@@ -13,8 +13,7 @@ export default function LayananPage() {
 
   return (
     <>
-      <Navbar /> {/* ⬅️ navbar ditambahkan */}
-
+      <Navbar />
       <main className="min-h-screen bg-gray-50 px-6 md:px-24 py-16">
 
         {/* JUDUL */}
@@ -90,7 +89,6 @@ export default function LayananPage() {
               </p>
             </div>
           </div>
-
           {/* Paket 2 */}
           <div className="bg-white rounded-xl shadow p-6 text-center border-2 border-green-600 flex flex-col justify-between h-full">
             <div>

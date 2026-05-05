@@ -22,8 +22,8 @@ export default function Navbar() {
       <div style={styles.menu}>
         <Link href="/home" style={styles.link}>Beranda</Link>
         <Link href="/produk" style={styles.link}>Product</Link>
-        <Link href="#" style={styles.link}>Keunggulan Produk</Link>
-        <Link href="#" style={styles.link}>Contact</Link>
+        <Link href="/layanan" style={styles.link}>Keunggulan Produk</Link>
+        <Link href="/contact" style={styles.link}>Contact</Link>
         <Link href="/logout" style={styles.link}>Logout</Link>
       </div>
 

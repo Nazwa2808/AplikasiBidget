@@ -1,4 +1,4 @@
-import Navbar from "../../components/Navbar"; // ⬅️ TAMBAH INI
+import Navbar from "../../components/Navbar"; 
 import Transaksi from "./transaksi";
 import { getProducts } from "@/lib/db";
 import Image from "next/image";
@@ -66,11 +66,9 @@ export default async function ProdukDetailPage({
             <h2 className="mt-6 font-semibold">
               Deskripsi Produk
             </h2>
-
             <p className="text-gray-700 mt-2 leading-relaxed">
               {produk?.gambar_deskripsi}
             </p>
-
             <a
               href={whatsappLink}
               target="_blank"
@@ -79,7 +77,6 @@ export default async function ProdukDetailPage({
             </a>
             <Transaksi produk={produk} />
           </div>
-
         </div>
       </main>
     </>

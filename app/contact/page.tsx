@@ -16,7 +16,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <Navbar /> {/* ⬅️ NAVBAR */}
+      <Navbar /> 
 
       <main className="min-h-screen bg-gray-50 px-6 md:px-24 py-16">
         {/* Judul */}
